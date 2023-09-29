@@ -1,3 +1,4 @@
+import 'package:awashderash/apps/todo/presentation/pages/login_page.dart';
 import 'package:awashderash/main/widget/button.dart';
 import 'package:awashderash/main/widget/main/slid_ads.dart';
 import 'package:flutter/material.dart';
@@ -34,30 +35,30 @@ class AppMenu extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              MenuButton(iconColor: Colors.white,icon: Icons.menu_book,labelText: 'Reading',backGround: Colors.indigo,),
-              MenuButton(iconColor: Colors.white,icon: Icons.bus_alert,labelText: 'Travel',backGround: Colors.lightGreen,),
-              MenuButton(iconColor: Colors.white,icon: Icons.hotel,labelText: 'Hotel',backGround: Colors.indigo,),
-              MenuButton(iconColor: Colors.white,icon: Icons.shopping_cart_outlined,labelText: 'Gebeya',backGround: Colors.redAccent,),
+              MenuButton(iconColor: Colors.white,icon: Icons.menu_book,labelText: 'Reading',backGround: Colors.indigo,page: LoginPage(),),
+              MenuButton(iconColor: Colors.white,icon: Icons.bus_alert,labelText: 'Travel',backGround: Colors.lightGreen,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.hotel,labelText: 'Hotel',backGround: Colors.indigo,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.shopping_cart_outlined,labelText: 'Gebeya',backGround: Colors.redAccent,page: LoginPage()),
             ],
           ),
           SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              MenuButton(iconColor: Colors.white,icon: Icons.school,labelText: 'School',backGround: Colors.orange,),
-              MenuButton(iconColor: Colors.white,icon: Icons.bus_alert,labelText: 'Travel',backGround: Colors.deepPurpleAccent,),
-              MenuButton(iconColor: Colors.white,icon: Icons.account_balance,labelText: 'Bank',backGround: Colors.indigo,),
-              MenuButton(iconColor: Colors.white,icon: Icons.storage,labelText: 'Bonda',backGround: Colors.deepOrange,),
+              MenuButton(iconColor: Colors.white,icon: Icons.school,labelText: 'School',backGround: Colors.orange,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.bus_alert,labelText: 'Travel',backGround: Colors.deepPurpleAccent,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.account_balance,labelText: 'Bank',backGround: Colors.indigo,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.storage,labelText: 'Bonda',backGround: Colors.deepOrange,page: LoginPage()),
             ],
           ),
           SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              MenuButton(iconColor: Colors.white,icon: Icons.task_outlined,labelText: 'ToDo',backGround: Colors.red,),
-              MenuButton(iconColor: Colors.white,icon: Icons.padding,labelText: 'Note',backGround: Colors.pink,),
-              MenuButton(iconColor: Colors.white,icon: Icons.food_bank,labelText: 'Deliver',backGround: Colors.green,),
-              MenuButton(iconColor: Colors.white,icon: Icons.car_rental,labelText: 'Cab',backGround: Colors.blue,),
+              MenuButton(iconColor: Colors.white,icon: Icons.task_outlined,labelText: 'ToDo',backGround: Colors.red,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.padding,labelText: 'Note',backGround: Colors.pink,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.food_bank,labelText: 'Deliver',backGround: Colors.green,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.car_rental,labelText: 'Cab',backGround: Colors.blue,page: LoginPage()),
             ],
 
           ),

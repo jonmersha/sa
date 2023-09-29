@@ -68,6 +68,7 @@ flutter:
   - asset/immage/hotel3.jpeg
   - asset/immage/hotel4.jpeg
   - asset/immage/hotel5.jpeg
+  - asset/todo/todologo.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
