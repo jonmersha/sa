@@ -18,9 +18,33 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(10.0),
               child: CustomTextField(emailController: _emailController),
-            )
+            ),
+             Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: CustomTextField(emailController: _emailController),
+            ),
+            SizedBox(height: 20,)
+            ,
+            
+            GestureDetector
+            (
+              onTap: () => {
+                print('Login Clicked'),
+              },
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1),
+                  borderRadius: BorderRadius.circular(10)
+                  ),
+                child: Text('Login'),
+            
+              ),
+            ),
+            Text('Other Methods'),
+
           ],
         ),
       ),
