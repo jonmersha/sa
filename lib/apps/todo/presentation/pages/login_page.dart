@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [const Icon(Icons.report_gmailerrorred)],
+                    children: const [Icon(Icons.account_balance)],
                   ),
                 ),
               ),

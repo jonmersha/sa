@@ -1,4 +1,4 @@
-package com.hira.coopay.customer.awashderash
+package com.hira.coopay.customer
 
 import io.flutter.embedding.android.FlutterActivity
 

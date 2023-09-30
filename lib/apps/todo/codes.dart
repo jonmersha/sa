@@ -1,0 +1,166 @@
+
+import 'package:awashderash/apps/todo/customer_color.dart';
+import 'package:awashderash/apps/todo/presentation/pages/todo_home.dart';
+import 'package:awashderash/security/auth_data.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+
+Widget loginButton(String title,String email,String password) {
+  return Padding(
+    padding: const EdgeInsets.all(15),
+    child: GestureDetector(
+      onTap: (){
+       // print('The Email Ids${email}');
+        AuthenticationRemote().login(email, password);
+      },
+      child: Container(
+        alignment: Alignment.center,
+        width: double.infinity,
+        height: 50,
+        decoration: BoxDecoration(
+            color: custom_green, borderRadius: BorderRadius.circular(10)),
+        child: Text(
+          title,
+          style: TextStyle(
+              color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ),
+  );
+}
+Widget signUpButton(String title,String email,String password,String confirmPassword) {
+  return Padding(
+    padding: const EdgeInsets.all(15),
+    child: GestureDetector(
+      onTap: (){
+        AuthenticationRemote().register (email.trim(),password.trim(),confirmPassword.trim());
+      },
+      child: Container(
+        alignment: Alignment.center,
+        width: double.infinity,
+        height: 50,
+        decoration: BoxDecoration(
+            color: custom_green, borderRadius: BorderRadius.circular(10)),
+        child: Text(
+          title,
+          style: TextStyle(
+              color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget textField(TextEditingController _controller, FocusNode _focusedNode,
+    String type, IconData iconData) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15),
+    child: Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular((15)),
+      ),
+      child: TextField(
+        controller: _controller,
+        focusNode: _focusedNode,
+        style: TextStyle(fontSize: 18, color: Colors.black),
+        decoration: InputDecoration(
+            prefixIcon: Icon(
+              iconData,
+              color: _focusedNode.hasFocus
+                  ? Color(0xff18DAA3)
+                  : Color(0xffc5c5c5),
+            ),
+            contentPadding:
+            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            hintText: type,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+              borderSide: BorderSide(color: Color(0xffc5c5c5), width: 2.0),
+            ),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: custom_green, width: 2.0))),
+      ),
+    ),
+  );
+}
+
+Widget images() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15),
+    child: Container(
+      width: double.infinity,
+      height: 300,
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('asset/common/lock.png'),
+              fit: BoxFit.cover)),
+    ),
+  );
+}
+Widget googleLogin(BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: GestureDetector(
+      onTap: () async {
+        User? user= await AuthenticationRemote().googleSignIn();
+        if(user!=null){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>TodoHome()),
+          );
+
+        }
+       // print(user?.displayName.toString());
+      },
+      child: Container(
+        width: 50,
+        height: 50,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('asset/common/google.png'),
+              fit: BoxFit.cover
+          ),
+        ),
+      ),
+    ),
+  );
+}
+Widget faceBookLogin() {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Container(
+      width: 50,
+      height: 50,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('asset/common/facebook.png'),
+            fit: BoxFit.cover
+        ),
+      ),
+    ),
+  );
+}
+Widget linkedInLogin() {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: GestureDetector(
+      onTap: (){
+
+      },
+      child: Container(
+        padding: EdgeInsets.all(8),
+        width: 50,
+        height: 50,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('asset/common/linkedin.png'),
+              fit: BoxFit.cover
+          ),
+        ),
+      ),
+    ),
+  );
+}
+

@@ -1,6 +1,9 @@
 import 'package:awashderash/apps/todo/presentation/pages/login_page.dart';
+import 'package:awashderash/apps/todo/presentation/pages/sign_up.dart';
+import 'package:awashderash/apps/todo/presentation/pages/tutor_login.dart';
 import 'package:awashderash/main/widget/button.dart';
 import 'package:awashderash/main/widget/main/slid_ads.dart';
+import 'package:awashderash/security/auth_page.dart';
 import 'package:flutter/material.dart';
 
 class AppMenu extends StatelessWidget {
@@ -55,8 +58,8 @@ class AppMenu extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              MenuButton(iconColor: Colors.white,icon: Icons.task_outlined,labelText: 'ToDo',backGround: Colors.red,page: LoginPage()),
-              MenuButton(iconColor: Colors.white,icon: Icons.padding,labelText: 'Note',backGround: Colors.pink,page: LoginPage()),
+              MenuButton(iconColor: Colors.white,icon: Icons.task_outlined,labelText: 'ToDo',backGround: Colors.red,page: AuthPage(false)),
+              MenuButton(iconColor: Colors.white,icon: Icons.padding,labelText: 'Note',backGround: Colors.pink,page: AuthPage(true)),
               MenuButton(iconColor: Colors.white,icon: Icons.food_bank,labelText: 'Deliver',backGround: Colors.green,page: LoginPage()),
               MenuButton(iconColor: Colors.white,icon: Icons.car_rental,labelText: 'Cab',backGround: Colors.blue,page: LoginPage()),
             ],
