@@ -67,6 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '463558689271',
     projectId: 'virtual-run-7b75d',
     storageBucket: 'virtual-run-7b75d.appspot.com',
+    androidClientId: '463558689271-a83mrv6d692o3ghg60vp50abt5c6125e.apps.googleusercontent.com',
+    iosClientId: '463558689271-gi1bos47d6m59crb95fae5sollicj6jg.apps.googleusercontent.com',
     iosBundleId: 'com.hira.coopay.customer',
   );
 
@@ -76,6 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '463558689271',
     projectId: 'virtual-run-7b75d',
     storageBucket: 'virtual-run-7b75d.appspot.com',
+    androidClientId: '463558689271-a83mrv6d692o3ghg60vp50abt5c6125e.apps.googleusercontent.com',
+    iosClientId: '463558689271-gi1bos47d6m59crb95fae5sollicj6jg.apps.googleusercontent.com',
     iosBundleId: 'com.hira.coopay.customer',
   );
 }

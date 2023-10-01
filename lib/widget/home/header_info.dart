@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -12,6 +13,8 @@ class HeaderInfo extends StatelessWidget {
     String dayName = DateFormat('EEE').format(DateTime.now());
    // var format = DateFormat.yMd('ar');
    // var dateString = format.format(DateTime.now());
+
+   final user=FirebaseAuth.instance.currentUser!;
     return  Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -20,15 +23,16 @@ class HeaderInfo extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Hi, Regassa!',
+                Text(
+                'Hi, ${user.email==null?user?.displayName.toString():user?.email}!',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
+              const SizedBox(height: 5,),
               Text(
-                '${dayName}:${now.day}, ${now.month}, ${now.year}',
+                '$dayName:${now.day}, ${now.month}, ${now.year}',
                 style: TextStyle(color: Colors.grey[200]),
               ),
               Container(
@@ -38,15 +42,36 @@ class HeaderInfo extends StatelessWidget {
           ),
 
           //Notifications
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.blue[800],
-                borderRadius: BorderRadius.circular(10)),
-            padding: const EdgeInsets.all(12),
-            child: const Icon(
-              Icons.notifications,
-              color: Colors.white,
-            ),
+          Row(
+
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue[800],
+                    borderRadius: BorderRadius.circular(10)),
+                padding: const EdgeInsets.all(12),
+                child: const Icon(
+                  Icons.notifications,
+                  color: Colors.white,
+                ),
+              ),
+             const SizedBox(width: 10,),
+              GestureDetector(
+                onTap: (){
+                  FirebaseAuth.instance.signOut();
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: const EdgeInsets.all(12),
+                  child: const Icon(
+                    Icons.logout,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
