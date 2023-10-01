@@ -10,7 +10,7 @@ class SearchBar extends StatelessWidget {
       child: Container(
           decoration: BoxDecoration(
               color: Colors.grey[800], borderRadius: BorderRadius.circular(12)),
-        //  padding: const EdgeInsets.all(8),
+         padding: const EdgeInsets.all(8),
         child:  const TextField(
           style: TextStyle(fontSize: 20,color: Colors.white,height: 1.5),
           decoration: InputDecoration(

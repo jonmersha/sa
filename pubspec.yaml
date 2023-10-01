@@ -51,6 +51,7 @@ flutter:
     - asset/common/facebook.png
     - asset/common/lock.png
     - asset/common/apple1.png
+    - asset/cm.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

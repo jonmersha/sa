@@ -1,5 +1,5 @@
-import 'package:awashderash/apps/todo/presentation/pages/sign_up.dart';
-import 'package:awashderash/apps/todo/presentation/pages/tutor_login.dart';
+import 'package:awashderash/apps/todo/trash/sign_up.dart';
+import 'package:awashderash/apps/todo/trash/tutor_login.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatefulWidget {
