@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hira.coopay.customer">
    <application
-        android:label="awashderash"
+        android:label="Coopay"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
