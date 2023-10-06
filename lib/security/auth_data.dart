@@ -9,7 +9,7 @@ abstract class AuthenticationDataSource{
 }
 class AuthenticationRemote extends AuthenticationDataSource {
   @override
-  Future<void> login(String emailAddress, String my_password) async {
+  Future<void> login(String emailAddress, String myPassword) async {
     // print('The Email Id ${email}');
     //try{}
     //final creadentials=await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.trim(), password: password.trim());
@@ -19,7 +19,7 @@ class AuthenticationRemote extends AuthenticationDataSource {
       final credential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(
         email: emailAddress,
-        password: my_password,
+        password: myPassword,
       );
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -44,11 +44,11 @@ class AuthenticationRemote extends AuthenticationDataSource {
 
   @override
   Future<User?> googleSignIn() async {
-    final GoogleSignIn _googleSignIn = GoogleSignIn();
-    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+    final FirebaseAuth auth = FirebaseAuth.instance;
     try {
       //Begin Interactive Sign in
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
       if (googleUser == null) return null;
       //Obtain outh details from requast
       final GoogleSignInAuthentication googleAuth = await googleUser
@@ -59,7 +59,7 @@ class AuthenticationRemote extends AuthenticationDataSource {
         idToken: googleAuth.idToken,
       );
       //Lets the users si
-      final UserCredential authResult = await _auth.signInWithCredential(
+      final UserCredential authResult = await auth.signInWithCredential(
           credential);
       final User? user = authResult.user;
       return user;

@@ -12,10 +12,10 @@ class AppMenu extends StatelessWidget {
     return Expanded(
         child: Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.background,
       ),
       child: SingleChildScrollView(
         child: Column(
@@ -33,7 +33,7 @@ class AppMenu extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -66,7 +66,7 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -98,7 +98,7 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -130,10 +130,10 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            BottomAdds()
+            const BottomAdds()
           ],
         ),
       ),

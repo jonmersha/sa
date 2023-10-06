@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _emailController = TextEditingController();
+    TextEditingController emailController = TextEditingController();
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(300.0),
@@ -21,11 +21,11 @@ class LoginPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: CustomTextField(emailController: _emailController),
+                child: CustomTextField(emailController: emailController),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: CustomTextField(emailController: _emailController),
+                child: CustomTextField(emailController: emailController),
               ),
               const SizedBox(
                 height: 20,
@@ -46,13 +46,13 @@ class LoginPage extends StatelessWidget {
                 height: 20,
               ),
               const Text('Other Methods'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10)),
@@ -64,15 +64,15 @@ class LoginPage extends StatelessWidget {
               ),
             //  SizedBox(height: 10,),
                Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [const Icon(Icons.facebook_outlined,color: Colors.blue,size: 40,)],
+                    children: const [Icon(Icons.facebook_outlined,color: Colors.blue,size: 40,)],
                   ),
                 ),
               ),

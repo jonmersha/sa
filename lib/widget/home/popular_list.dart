@@ -1,56 +1,68 @@
-import 'package:awashderash/util/list_item.dart';
+import 'package:awashderash/apps/todo/presentation/widgets/task_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-class PopularList extends StatelessWidget {
-  const PopularList({Key? key}) : super(key: key);
+class PopularList extends StatefulWidget {
+  //bool show;
 
+  Function(bool show) flowDirectio;
+  PopularList({Key? key, required this.flowDirectio}) : super(key: key);
+
+  @override
+  State<PopularList> createState() => _PopularListState();
+}
+
+class _PopularListState extends State<PopularList> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-          padding: EdgeInsets.all(25),
-          decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(20),
-                  topLeft: Radius.circular(20))),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'workOut',
-                    style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  Icon(Icons.more_horiz)
-                ],
+      padding: const EdgeInsets.all(25),
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 128, 148, 176),
+          borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(20), topLeft: Radius.circular(20))),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                'Task List',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              //List View
-              const SizedBox(
-                height: 16,
-              ),
-              // Container(
-              //
-              //       child: ListItem(),
-              //   ),
-              Expanded(
-                child: ListView(
-                  children: const [
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                    ListItem(),
-                  ],
-                ),
-              )
+              Icon(Icons.more_horiz)
             ],
           ),
-        ));
+          //List View
+          const SizedBox(
+            height: 16,
+          ),
+
+          Expanded(
+              child: NotificationListener<UserScrollNotification>(
+            onNotification: (notification) {
+              if (notification.direction == ScrollDirection.forward) {
+                setState(() {
+                  widget.flowDirectio(true);
+                });
+              }
+              if (notification.direction == ScrollDirection.reverse) {
+                setState(() {
+                  widget.flowDirectio(false);
+                });
+              }
+              return true;
+            },
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return const TaskWidget();
+              },
+              itemCount: 10,
+            ),
+          ))
+        ],
+      ),
+    ));
   }
 }

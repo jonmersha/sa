@@ -14,22 +14,28 @@ class MainHome extends StatefulWidget {
 class _MainHomeState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      backgroundColor: Colors.blue[900],
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.food_bank), label: '')
-        ],
-      ),
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: SafeArea(
-        child: Column(children: const [
-          HeaderInfo(),
-          SearchBar(),
-          TopButtonContainer(),
-           AppMenu()
+        child: Column(children: [
+          Container(
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.onPrimary,
+                borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10))),
+            child: Column(
+              children: const [
+                HeaderInfo(),
+                SearchBar(),
+              ],
+            ),
+          ),
+          const TopButtonContainer(),
+          const SizedBox(
+            height: 20,
+          ),
+          const AppMenu()
         ]),
       ),
     );

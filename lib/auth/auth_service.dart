@@ -23,11 +23,11 @@ class AuthService{
 
   }
   Future<User?> googleSignIn() async {
-    final GoogleSignIn _googleSignIn = GoogleSignIn();
-    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+    final FirebaseAuth auth = FirebaseAuth.instance;
     try {
       //Begin Interactive Sign in
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
       if (googleUser == null) return null;
       //Obtain outh details from requast
       final GoogleSignInAuthentication googleAuth = await googleUser
@@ -38,7 +38,7 @@ class AuthService{
         idToken: googleAuth.idToken,
       );
       //Lets the users si
-      final UserCredential authResult = await _auth.signInWithCredential(
+      final UserCredential authResult = await auth.signInWithCredential(
           credential);
       final User? user = authResult.user;
       return user;

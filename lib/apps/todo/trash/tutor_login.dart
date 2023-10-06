@@ -12,8 +12,8 @@ class LogIN_screen extends StatefulWidget {
 }
 
 class _LogIN_screenState extends State<LogIN_screen> {
-  FocusNode _focusNode1 = FocusNode();
-  FocusNode _focusNode2 = FocusNode();
+  final FocusNode _focusNode1 = FocusNode();
+  final FocusNode _focusNode2 = FocusNode();
 
   final email = TextEditingController();
   final password = TextEditingController();
@@ -39,7 +39,7 @@ class _LogIN_screenState extends State<LogIN_screen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               images(),
@@ -58,7 +58,7 @@ class _LogIN_screenState extends State<LogIN_screen> {
                       "Don't have Account?",
                       style: TextStyle(color: Colors.grey[700], fontSize: 14),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     GestureDetector(
@@ -76,11 +76,11 @@ class _LogIN_screenState extends State<LogIN_screen> {
               ),
               const SizedBox(height: 20),
               loginButton('LogIn', email.text.trim(), password.text.trim()),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text('Or continue with!',style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-              SizedBox(
+              const Text('Or continue with!',style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+              const SizedBox(
                 height: 20,
               ),
               Row(

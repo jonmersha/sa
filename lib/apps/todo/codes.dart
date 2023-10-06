@@ -21,7 +21,7 @@ Widget loginButton(String title,String email,String password) {
             color: custom_green, borderRadius: BorderRadius.circular(10)),
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),
         ),
       ),
@@ -43,7 +43,7 @@ Widget signUpButton(String title,String email,String password,String confirmPass
             color: custom_green, borderRadius: BorderRadius.circular(10)),
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),
         ),
       ),
@@ -51,7 +51,7 @@ Widget signUpButton(String title,String email,String password,String confirmPass
   );
 }
 
-Widget textField(TextEditingController _controller, FocusNode _focusedNode,
+Widget textField(TextEditingController controller, FocusNode focusedNode,
     String type, IconData iconData) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -61,20 +61,20 @@ Widget textField(TextEditingController _controller, FocusNode _focusedNode,
         borderRadius: BorderRadius.circular((15)),
       ),
       child: TextField(
-        controller: _controller,
-        focusNode: _focusedNode,
-        style: TextStyle(fontSize: 18, color: Colors.black),
+        controller: controller,
+        focusNode: focusedNode,
+        style: const TextStyle(fontSize: 18, color: Colors.black),
         decoration: InputDecoration(
             prefixIcon: Icon(
               iconData,
-              color: _focusedNode.hasFocus
-                  ? Color(0xff18DAA3)
-                  : Color(0xffc5c5c5),
+              color: focusedNode.hasFocus
+                  ? const Color(0xff18DAA3)
+                  : const Color(0xffc5c5c5),
             ),
             contentPadding:
-            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             hintText: type,
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(4.0)),
               borderSide: BorderSide(color: Color(0xffc5c5c5), width: 2.0),
             ),
@@ -108,7 +108,7 @@ Widget googleLogin(BuildContext context) {
         if(user!=null){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) =>TodoHome()),
+            MaterialPageRoute(builder: (context) =>const TodoHome()),
           );
 
         }
@@ -150,7 +150,7 @@ Widget linkedInLogin() {
 
       },
       child: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         width: 50,
         height: 50,
         decoration: const BoxDecoration(

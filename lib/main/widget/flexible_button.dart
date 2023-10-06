@@ -24,7 +24,7 @@ class FlexibleButton extends StatelessWidget {
       children: [
         Container(
           width: width,
-          height: this.height,
+          height: height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: backGround,

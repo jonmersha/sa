@@ -12,9 +12,9 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  FocusNode _focusNode1 = FocusNode();
-  FocusNode _focusNode2 = FocusNode();
-  FocusNode _focusNode3 = FocusNode();
+  final FocusNode _focusNode1 = FocusNode();
+  final FocusNode _focusNode2 = FocusNode();
+  final FocusNode _focusNode3 = FocusNode();
 
   final email = TextEditingController();
   final password = TextEditingController();
@@ -40,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               images(),
@@ -61,7 +61,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       "Do you have account?",
                       style: TextStyle(color: Colors.grey[700], fontSize: 14),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     GestureDetector(

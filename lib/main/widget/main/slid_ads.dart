@@ -21,24 +21,24 @@ class _BottomAddsState extends State<BottomAdds> {
     ];
 
     return Container(
-      height: 200,
+      height: 210,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.background,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: CarouselSlider(
           options: CarouselOptions(
-            height: 200.0,
+            height: 250.0,
             // Set the height of the slider
             enableInfiniteScroll: true,
             // Allow infinite scrolling
             autoPlay: true,
             // Auto-play the slider
-            autoPlayInterval: Duration(seconds: 10),
+            autoPlayInterval: const Duration(seconds: 3),
             // Auto-play interval
-            autoPlayAnimationDuration: Duration(milliseconds: 1800),
+            autoPlayAnimationDuration: const Duration(milliseconds: 900),
             // Animation duration
             pauseAutoPlayOnTouch: true,
             // Pause auto-play on touch
@@ -47,35 +47,44 @@ class _BottomAddsState extends State<BottomAdds> {
           items: images.map((image) {
             return Builder(
               builder: (BuildContext context) {
-                return Stack(children: [
-                  Positioned.fill(
-                    child: ClipRect(
-                        child: Container(
-                            height: 150,
-                            width: 250,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20)),
-                            child: Image.asset(
-                              image,
-                              fit: BoxFit.cover,
-                            ))),
+                return Container(
+                  // width: 350,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                        image: AssetImage(image), fit: BoxFit.cover),
                   ),
-                   Positioned(
-                      top: 150,
-                      child: Container(
-                        width:300,
-                        decoration: BoxDecoration(color: Colors.grey[500]),
-                        child: Text(
-                          'Some Message Comes with \n advertisement ',
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        alignment: Alignment.bottomCenter,
+                        padding: const EdgeInsets.all(10),
+                        decoration: const BoxDecoration(
+                            color: Color.fromARGB(199, 2, 5, 52),
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10))),
+                        width: double.infinity,
+                        height: 80,
+                        child: const Text(
+                          'Some Message Comes with advertisement ',
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            height: 1,
+                            wordSpacing: 2,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 16,
+                            textBaseline: TextBaseline.alphabetic,
+                            height: 1.5,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ))
-                ]); // You can use Image.network() for remote images
+                      ),
+                    ],
+                  ),
+                );
               },
             );
           }).toList(),

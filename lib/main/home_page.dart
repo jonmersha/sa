@@ -1,4 +1,3 @@
-
 import 'package:awashderash/widget/home/header_info.dart';
 import 'package:awashderash/widget/home/popular_list.dart';
 import 'package:awashderash/widget/home/search_bar.dart';
@@ -27,19 +26,14 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(children: [
 //Greeting
-          const Padding(
-            padding: EdgeInsets.all(10.0),
-            child: HeaderInfo()
-          ),
+          const Padding(padding: EdgeInsets.all(10.0), child: HeaderInfo()),
           const SizedBox(
             height: 10,
           ),
           //Search Bar
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child:SearchBar()
-
-          ),
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: SearchBar()),
           const SizedBox(
             height: 25,
           ),
@@ -71,10 +65,9 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(
             height: 25,
           ),
-          const PopularList()
+          // PopularList(flowDirectio: ,)
         ]),
       ),
     );
   }
 }
-
