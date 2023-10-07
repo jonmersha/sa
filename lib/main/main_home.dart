@@ -24,10 +24,10 @@ class _MainHomeState extends State<MainHome> {
                 borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(10),
                     bottomLeft: Radius.circular(10))),
-            child: Column(
-              children: const [
+            child: const Column(
+              children: [
                 HeaderInfo(),
-                SearchBar(),
+                MySearchBar(),
               ],
             ),
           ),

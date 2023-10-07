@@ -25,7 +25,7 @@ class HeaderInfo extends StatelessWidget {
               Text(
                 'Hi, ${user.email ?? user.displayName.toString()}!',
                 style: TextStyle(
-                    color: Theme.of(context).colorScheme.onBackground,
+                    color: Theme.of(context).colorScheme.primaryContainer,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
