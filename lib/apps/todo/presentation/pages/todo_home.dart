@@ -1,6 +1,7 @@
 import 'package:awashderash/apps/todo/customer_color.dart';
 import 'package:awashderash/apps/todo/presentation/pages/new_task.dart';
-import 'package:awashderash/widget/home/popular_list.dart';
+import 'package:awashderash/apps/todo/presentation/widgets/reusable_app_bar.dart';
+import 'package:awashderash/apps/todo/presentation/widgets/todo_list.dart';
 import 'package:flutter/material.dart';
 
 class TodoHome extends StatefulWidget {
@@ -27,7 +28,7 @@ class _TodoHomeState extends State<TodoHome> {
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => NewTask()));
+                .push(MaterialPageRoute(builder: (context) => const NewTask()));
           },
           backgroundColor: custom_green,
           child: const Icon(
@@ -36,31 +37,16 @@ class _TodoHomeState extends State<TodoHome> {
           ),
         ),
       ),
-      appBar: AppBar(actions: [Text('Fullas')]),
       body: SafeArea(
         child: Column(children: [
-          Container(
-            width: double.infinity,
-            height: 200,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('asset/todo/todologo.jpg'),
-                    fit: BoxFit.cover)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                // Row(
-                //   children: const [
-                //     Expanded(child: Text('ssss')),
-                //   ],
-                // )
-              ],
-            ),
+          ReusableAppBar(
+            logo: 'asset/todo/add.png',
+            actionList: Container(),
           ),
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
-          PopularList(flowDirectio: floatingAction)
+          ToDoList(flowDirectio: floatingAction)
         ]),
       ),
     );

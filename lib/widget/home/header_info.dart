@@ -8,10 +8,8 @@ class HeaderInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
-    //DateTime date = DateTime(now.year, now.month, now.day);
+
     String dayName = DateFormat('EEE').format(DateTime.now());
-    // var format = DateFormat.yMd('ar');
-    // var dateString = format.format(DateTime.now());
 
     final user = FirebaseAuth.instance.currentUser!;
     return Padding(
@@ -25,7 +23,7 @@ class HeaderInfo extends StatelessWidget {
               Text(
                 'Hi, ${user.email ?? user.displayName.toString()}!',
                 style: TextStyle(
-                    color: Theme.of(context).colorScheme.primaryContainer,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
@@ -34,7 +32,8 @@ class HeaderInfo extends StatelessWidget {
               ),
               Text(
                 '$dayName:${now.day}, ${now.month}, ${now.year}',
-                style: TextStyle(color: Colors.grey[900]),
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.onPrimary),
               ),
               Container(
                 decoration: const BoxDecoration(),
@@ -47,12 +46,12 @@ class HeaderInfo extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 8, 190, 90),
+                    color: Theme.of(context).colorScheme.onPrimary,
                     borderRadius: BorderRadius.circular(10)),
                 padding: const EdgeInsets.all(12),
-                child: const Icon(
+                child: Icon(
                   Icons.notifications,
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
               const SizedBox(
@@ -64,13 +63,13 @@ class HeaderInfo extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 251, 18, 2),
+                    color: Theme.of(context).cardColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: const EdgeInsets.all(12),
-                  child: const Icon(
+                  child: Icon(
                     Icons.logout,
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ),

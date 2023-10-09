@@ -12,6 +12,10 @@ void main() async {
   );
 
   runApp(MaterialApp(
+    theme: ThemeData()
+        .copyWith(useMaterial3: true, colorScheme: ColorScheme.fromSwatch()
+            // ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 45, 1, 57)),
+            ),
     initialRoute: '/',
     routes: {
       '/': (context) => const AuthGate(),

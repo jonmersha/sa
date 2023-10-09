@@ -20,7 +20,7 @@ class _MainHomeState extends State<MainHome> {
         child: Column(children: [
           Container(
             decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onPrimary,
+                color: Theme.of(context).colorScheme.primary,
                 borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(10),
                     bottomLeft: Radius.circular(10))),

@@ -19,9 +19,9 @@ class TopButtonContainer extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              FlexibleButton(iconColor: Colors.white, icon: Icons.note, labelText: '', backGround: Colors.blueAccent,width: 80,),
-              FlexibleButton(iconColor: Colors.white, icon: Icons.video_collection, labelText: '', backGround: Colors.white30,width: 80,),
-              FlexibleButton(iconColor: Colors.white, icon: Icons.list, labelText: '', backGround: Colors.white30,width: 80,),
+              FlexibleButton(iconColor: Colors.blue, icon: Icons.note, labelText: '', backGround: Colors.white,width: 70,),
+              FlexibleButton(iconColor: Colors.red, icon: Icons.video_collection, labelText: '', backGround: Colors.white,width: 70,),
+              FlexibleButton(iconColor: Colors.blue, icon: Icons.list, labelText: '', backGround: Colors.white,width: 70,),
             ],
           ),
         ),

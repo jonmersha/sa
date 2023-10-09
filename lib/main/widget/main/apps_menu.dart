@@ -15,16 +15,16 @@ class AppMenu extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.onPrimary,
       ),
-      child: SingleChildScrollView(
+      child: const SingleChildScrollView(
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 15, left: 20),
+              padding: EdgeInsets.only(top: 15, left: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Apps',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -33,12 +33,12 @@ class AppMenu extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 MenuButton(
                   iconColor: Colors.white,
                   icon: Icons.menu_book,
@@ -66,12 +66,12 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 MenuButton(
                     iconColor: Colors.white,
                     icon: Icons.school,
@@ -98,12 +98,12 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 MenuButton(
                     iconColor: Colors.white,
                     icon: Icons.task_outlined,
@@ -130,10 +130,10 @@ class AppMenu extends StatelessWidget {
                     page: CommingSoon()),
               ],
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 30,
             ),
-            const BottomAdds()
+            BottomAdds()
           ],
         ),
       ),

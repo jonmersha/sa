@@ -21,9 +21,10 @@ class _BottomAddsState extends State<BottomAdds> {
     ];
 
     return Container(
+      alignment: Alignment.bottomCenter,
       height: 210,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+       // color: Theme.of(context).colorScheme,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(

@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
         ),
         // color: Colors.blueAccent[100]
       ),
-      child:  TextField(
+      child: TextField(
         controller: _emailController,
         decoration: const InputDecoration(
             prefixIcon: Icon(
