@@ -33,8 +33,8 @@ class ListItem extends StatelessWidget {
                 const SizedBox(
                   width: 12,
                 ),
-                Column(
-                  children: const [
+                const Column(
+                  children: [
                     Text(
                       'Speaking',
                       style:

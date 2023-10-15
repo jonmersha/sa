@@ -1,4 +1,5 @@
 import 'package:awashderash/apps/comming_soon.dart';
+import 'package:awashderash/apps/school/presentation/page/home/main_branch_operation_page.dart';
 import 'package:awashderash/apps/todo/presentation/pages/todo_home.dart';
 import 'package:awashderash/main/widget/button.dart';
 import 'package:awashderash/main/widget/main/slid_ads.dart';
@@ -77,7 +78,7 @@ class AppMenu extends StatelessWidget {
                     icon: Icons.school,
                     labelText: 'School',
                     backGround: Colors.orange,
-                    page: CommingSoon()),
+                    page: MainOperationPage()),
                 MenuButton(
                     iconColor: Colors.white,
                     icon: Icons.bus_alert,

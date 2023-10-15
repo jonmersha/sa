@@ -56,9 +56,9 @@ class LoginPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10)),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [Icon(Icons.account_balance)],
+                    children: [Icon(Icons.account_balance)],
                   ),
                 ),
               ),
@@ -70,9 +70,9 @@ class LoginPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10)),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [Icon(Icons.facebook_outlined,color: Colors.blue,size: 40,)],
+                    children: [Icon(Icons.facebook_outlined,color: Colors.blue,size: 40,)],
                   ),
                 ),
               ),

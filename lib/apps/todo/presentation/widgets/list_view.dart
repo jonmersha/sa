@@ -10,6 +10,6 @@ class ListBuilding extends StatefulWidget {
 class _ListBuildingState extends State<ListBuilding> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

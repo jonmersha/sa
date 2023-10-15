@@ -176,10 +176,10 @@ class _RegisterEmailState extends State<RegisterEmail> {
                 const SizedBox(
                   height: 40,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
-                    children: const [
+                    children: [
                       Expanded(
                           child: Divider(
                             thickness: 0.5,

@@ -18,15 +18,15 @@ class _PopularListState extends State<PopularList> {
     return Expanded(
         child: Container(
       padding: const EdgeInsets.all(25),
-      decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 128, 148, 176),
-          borderRadius: const BorderRadius.only(
+      decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 128, 148, 176),
+          borderRadius: BorderRadius.only(
               topRight: Radius.circular(20), topLeft: Radius.circular(20))),
       child: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text(
                 'Task List',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),

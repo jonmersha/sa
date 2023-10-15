@@ -8,9 +8,9 @@ class TopButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
+      children: [
         //fine
         EmoticonFace(
           emoticons: '😜',

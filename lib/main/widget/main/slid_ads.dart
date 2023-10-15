@@ -12,11 +12,11 @@ class _BottomAddsState extends State<BottomAdds> {
   @override
   Widget build(BuildContext context) {
     List<String> images = [
-      'asset/immage/hotel1.jpeg',
-      'asset/immage/hotel2.jpeg',
-      'asset/immage/hotel3.jpeg',
-      'asset/immage/hotel4.jpeg',
-      'asset/immage/hotel5.jpeg',
+      'asset/image/hotel1.jpeg',
+      'asset/image/hotel2.jpeg',
+      'asset/image/hotel3.jpeg',
+      'asset/image/hotel4.jpeg',
+      'asset/image/hotel5.jpeg',
       // Add more image paths as needed
     ];
 

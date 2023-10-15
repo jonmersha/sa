@@ -1,11 +1,8 @@
-import 'dart:async';
 
 import 'package:datetime_picker_formfield_new/datetime_picker_formfield.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 // For changing the language
-import 'package:flutter_localizations/flutter_localizations.dart';
 // import 'package:flutter_cupertino_localizations/flutter_cupertino_localizations.dart';
 
 const appName = 'DateTimeField Example';
@@ -17,7 +14,7 @@ class DatePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     ); //MaterialApp(
     // title: appName,
@@ -42,6 +39,8 @@ class DatePicker extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   MyHomePageState createState() => MyHomePageState();
 }
@@ -50,17 +49,19 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(appName)),
+        appBar: AppBar(title: const Text(appName)),
         body: SingleChildScrollView(
           child: Center(
               child: Container(
-                  constraints: BoxConstraints(maxWidth: 600),
-                  child: DateTimeForm())),
+                  constraints: const BoxConstraints(maxWidth: 600),
+                  child: const DateTimeForm())),
         ));
   }
 }
 
 class DateTimeForm extends StatefulWidget {
+  const DateTimeForm({super.key});
+
   @override
   _DateTimeFormState createState() => _DateTimeFormState();
 }
@@ -89,7 +90,7 @@ class _DateTimeFormState extends State<DateTimeForm> {
           // ComplexDateTimeField(),
           //SizedBox(height: 24),
           ElevatedButton(
-            child: Text('Save'),
+            child: const Text('Save'),
             onPressed: () => formKey.currentState?.save(),
           ),
           // ElevatedButton(
@@ -148,12 +149,14 @@ class _DateTimeFormState extends State<DateTimeForm> {
 
 class BasicDateTimeField extends StatelessWidget {
   final format = DateFormat("yyyy-MM-dd HH:mm");
+
+  BasicDateTimeField({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Text('Basic (${format.pattern})'),
       Container(
-        decoration: BoxDecoration(color: Colors.amber),
+        decoration: const BoxDecoration(color: Colors.amber),
         child: DateTimeField(
           format: format,
           onShowPicker: (context, currentValue) async {

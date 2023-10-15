@@ -1,8 +1,6 @@
-import 'package:awashderash/apps/todo/presentation/widgets/date_time_pick.dart';
 import 'package:awashderash/apps/todo/presentation/widgets/date_time_picker.dart';
 import 'package:awashderash/apps/todo/presentation/widgets/exapanded_body.dart';
 import 'package:awashderash/apps/todo/presentation/widgets/reusable_app_bar.dart';
-import 'package:awashderash/apps/todo/presentation/widgets/reusable_form_field.dart';
 import 'package:awashderash/functions/navigation.dart';
 import 'package:awashderash/widget/common/reusable_text.dart';
 import 'package:flutter/material.dart';
@@ -136,7 +134,7 @@ class _TaskCategoryDateState extends State<TaskCategoryDate> {
                   onTap: () => _selectDate(context),
                   child: Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 196, 205, 212),
                       borderRadius: BorderRadius.circular(20),
@@ -146,14 +144,14 @@ class _TaskCategoryDateState extends State<TaskCategoryDate> {
                         : selectedDateTime),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
                   onTap: () => _selectDate(context),
                   child: Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 196, 205, 212),
                       borderRadius: BorderRadius.circular(20),
@@ -195,7 +193,7 @@ class _TaskCategoryDateState extends State<TaskCategoryDate> {
                             Theme.of(context).colorScheme.primaryContainer,
                       ),
                       onPressed: () {
-                        pushTo(context, DatePicker());
+                        pushTo(context, const DatePicker());
                       },
                       child: const Icon(
                         Icons.arrow_forward_sharp,

@@ -40,12 +40,12 @@ class _TaskWidgetState extends State<TaskWidget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Title',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 40,
                     ),
                     Checkbox(
@@ -57,7 +57,7 @@ class _TaskWidgetState extends State<TaskWidget> {
                         })
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -67,7 +67,7 @@ class _TaskWidgetState extends State<TaskWidget> {
                       color: Colors.grey.shade400,
                       fontWeight: FontWeight.w400),
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 10),
