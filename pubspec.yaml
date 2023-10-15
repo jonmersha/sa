@@ -51,7 +51,7 @@ flutter:
 #    - asset/immage/hotel4.jpeg
 #    - asset/immage/hotel5.jpeg
     - asset/todo/todologo.jpg
-    - asset/commom/
+    - asset/common/
 #    - asset/common/google.png
 #    - asset/common/apple.png
 #    - asset/common/linkedin.png

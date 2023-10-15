@@ -14,20 +14,21 @@ class ServiceList extends StatefulWidget {
 }
 
 
-
 class _ServiceListState extends State<ServiceList> {
   @override
   Widget build(BuildContext context) {
     return         GetBuilder<BranchServiceController>(builder: (serviceController){
-      return serviceController.isLoaded? ListView.builder(
+       return serviceController.isLoaded? ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: serviceController.serviceList.length,
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: (){
-                Get.to(()=>DetailServiceListContainer(serviceModel: serviceController.serviceList[index]),
-                    transition: Transition.leftToRightWithFade,duration: const Duration(milliseconds: 800));
+               Get.to(()=>DetailServiceListContainer(serviceModel: serviceController.serviceList[index]),
+                   transition: Transition.leftToRightWithFade,duration: const Duration(milliseconds: 800));
+
+
               },
 
               child: Container(
@@ -45,8 +46,9 @@ class _ServiceListState extends State<ServiceList> {
                           color: Colors.amber,
                           image:  DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(AppConstants.IMAGE_URL+serviceController.serviceList[index].serviceIconPath!)
-                          )),
+                              image: NetworkImage(AppConstants.IMAGE_URL+serviceController.serviceList[index].imagePath.toString())
+                          ),
+                      ),
                     ),
                     Expanded(
                       child: Container(
@@ -69,7 +71,8 @@ class _ServiceListState extends State<ServiceList> {
                 ),
               ),
             );
-          }):const CircularProgressIndicator(
+          }):
+                const CircularProgressIndicator(
         color: AppColors.mainColor,
       );
     });

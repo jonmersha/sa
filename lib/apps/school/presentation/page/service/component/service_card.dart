@@ -18,7 +18,7 @@ class ServiceCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         BigText(
-          text: service.serviceName!,
+          text: service.name!,
           size: Dimensions.fontSize20,
           color: AppColors.mainColor,
         ),
@@ -26,7 +26,7 @@ class ServiceCard extends StatelessWidget {
           height: Dimensions.height10,
         ),
         SmallText(
-          text: service.serviceDescription!,
+          text: service.name!,
         ),
         SizedBox(
           height: Dimensions.height10,

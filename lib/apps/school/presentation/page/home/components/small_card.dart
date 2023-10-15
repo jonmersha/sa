@@ -47,7 +47,7 @@ class SmallCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               BigText(
-                text: documentList.documentName!,
+                text: documentList.tITLE!,
                 size: Dimensions.fontSize20,
                 color: Colors.white,
               ),
@@ -55,7 +55,7 @@ class SmallCard extends StatelessWidget {
               SizedBox(
                 height: Dimensions.height10,
               ),
-              SmallText(text: documentList.documentDescription!,color: Colors.white ,size: 12,)
+              SmallText(text: documentList.rESDESCRIPTION!,color: Colors.white ,size: 12,)
             ],
           ),
         ),

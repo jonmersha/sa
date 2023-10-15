@@ -1,6 +1,7 @@
 
 
 import 'package:awashderash/apps/school/data/repository/ServiceRepository.dart';
+import 'package:awashderash/apps/school/model/service_detail_model.dart';
 import 'package:awashderash/apps/school/model/service_model.dart';
 import 'package:get/get.dart';
 
@@ -18,11 +19,11 @@ class BranchServiceController extends GetxController{
   Future<void> getServiceList() async{
     Response response = await serviceRepo.getRecommendedProductList();
     if(response.statusCode==200){
-      //print("got Products====================================");
+      print("got Productssss====================================");
       _serviceList=[];
-     _serviceList.addAll(ServiceModel.fromJson(response.body).service);
+     _serviceList.addAll(ServiceModel.fromJson({"service":response.body}).service);
       _isLoaded=true;
-      //print(response.body);
+      print(response.body);
       update();
     }else{
       print(response.statusText);

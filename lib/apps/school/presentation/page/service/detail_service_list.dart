@@ -2,6 +2,7 @@ import 'package:awashderash/apps/school/controller/service_detail_list_controlle
 import 'package:awashderash/apps/school/presentation/page/service/component/detail_service_card.dart';
 import 'package:awashderash/apps/school/presentation/page/service/main_service_list_container.dart';
 import 'package:awashderash/apps/school/utils/app_color.dart';
+import 'package:awashderash/apps/school/utils/app_constants.dart';
 import 'package:awashderash/util/dimension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,10 +45,10 @@ class _DetailServiceListState extends State<DetailServiceList> {
                           BorderRadius.circular(Dimensions.width10),
                           color: Colors.blue,
 
-                          // image:  DecorationImage(
-                          //     fit: BoxFit.cover,
-                          //     image: NetworkImage(AppConstants.IMAGE_URL+serviceListDetailController.serviceDetailList[index].serviceIconPath!)
-                          // )
+                          image:  DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(AppConstants.IMAGE_URL+serviceListDetailController.serviceDetailList[index].serviceIconPath!)
+                          )
                       ),
                     ),
                     Expanded(

@@ -68,7 +68,7 @@ class _SectionListState extends State<SectionList> {
                             color: Colors.blue,
                             image:  DecorationImage(
                                 fit: BoxFit.cover,
-                                image: NetworkImage(AppConstants.IMAGE_URL+widget.document.documentImagePath!)
+                                image: NetworkImage(AppConstants.IMAGE_URL+widget.document.imagePath!)
                             )
                         ),
                       ),

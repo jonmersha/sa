@@ -1,6 +1,3 @@
-
-
-
 import 'package:awashderash/apps/school/controller/DocumentController.dart';
 import 'package:awashderash/apps/school/controller/document_section_controller.dart';
 import 'package:awashderash/apps/school/model/document_model.dart';
@@ -45,7 +42,7 @@ class DocumentSectionListContainer extends StatelessWidget {
                   GestureDetector(
                     onTap: (){
                     //  Get.find()
-                      Get.find<DocumentSectionController>().getDocumentSectionListByID(documentModel.documentID!);
+                      Get.find<DocumentSectionController>().getDocumentSectionListByID(documentModel.iD!);
                     },
                       child: const AppIcon(iconData: Icons.refresh,
                         backGroundColor: AppColors.mainColor,
@@ -69,7 +66,7 @@ class DocumentSectionListContainer extends StatelessWidget {
                       color: Colors.white
                   ),
 
-                  child:  BigText(text: documentModel.documentName !,size: Dimensions.fontSize26, ),
+                  child:  BigText(text: documentModel.tITLE!,size: Dimensions.fontSize26, ),
                 )
             ),
             pinned: true,
@@ -77,7 +74,7 @@ class DocumentSectionListContainer extends StatelessWidget {
             expandedHeight: Dimensions.height200,
             flexibleSpace: FlexibleSpaceBar(
                 background: Image.network(
-                  AppConstants.IMAGE_URL+documentModel.documentImagePath!,
+                  AppConstants.IMAGE_URL+documentModel.imagePath!,
                   width: double.maxFinite,
                   fit: BoxFit.cover,
 
@@ -92,9 +89,9 @@ class DocumentSectionListContainer extends StatelessWidget {
 
                     padding: EdgeInsets.symmetric(horizontal: Dimensions.width20),
                     child:  ExpandableTextWidget(
-                        text:documentModel.documentDescription!)
+                        text:documentModel.rESDESCRIPTION!)
                 ),
-                 SectionList(docId: documentModel.documentID!,document: documentModel,)
+                 SectionList(docId: documentModel.iD!,document: documentModel,)
               ],
             ),
 

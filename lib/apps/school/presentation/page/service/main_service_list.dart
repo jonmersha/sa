@@ -53,7 +53,7 @@ class BranchServiceList extends StatelessWidget {
                   color: Colors.white
                 ),
 
-                child:  BigText(text: serviceModel.serviceName!,size: Dimensions.fontSize26, ),
+                child:  BigText(text: serviceModel.name!,size: Dimensions.fontSize26, ),
               )
             ),
             pinned: true,
@@ -61,7 +61,7 @@ class BranchServiceList extends StatelessWidget {
             expandedHeight: Dimensions.height200,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.network(
-                  AppConstants.IMAGE_URL+serviceModel.serviceIconPath!,
+                  AppConstants.IMAGE_URL+serviceModel.imagePath!,
                 width: double.maxFinite,
                 fit: BoxFit.cover,
 
@@ -75,7 +75,7 @@ class BranchServiceList extends StatelessWidget {
       Container(
           padding: EdgeInsets.symmetric(horizontal: Dimensions.width20),
           child:  ExpandableTextWidget(
-              text: serviceModel.serviceDescription!)
+              text: serviceModel.name!)
       ),
     ],
   ),

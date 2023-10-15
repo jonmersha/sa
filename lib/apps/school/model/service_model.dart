@@ -2,7 +2,6 @@ class ServiceModel {
   late List<Service> _service;
   List<Service> get service=>_service;
 
-
   ServiceModel({required service});
 
   ServiceModel.fromJson(Map<String, dynamic> json) {
@@ -18,28 +17,29 @@ class ServiceModel {
 }
 
 class Service {
-  int? serviceID;
-  String? serviceName;
-  String? serviceDescription;
-  String? serviceIconPath;
-  String? serviceCreateTime;
-  int? serviceCreator;
+  int? id;
+  int? grade;
+  String? name;
+  String? imagePath;
 
   Service(
-      {this.serviceID,
-        this.serviceName,
-        this.serviceDescription,
-        this.serviceIconPath,
-        this.serviceCreateTime,
-        this.serviceCreator});
+      {
+
+
+
+        this.id,
+        this.name,
+        this.grade,
+        this.imagePath
+
+
+      });
 
   Service.fromJson(Map<String, dynamic> json) {
-    serviceID = json['serviceID'];
-    serviceName = json['serviceName'];
-    serviceDescription = json['serviceDescription'];
-    serviceIconPath = json['serviceIconPath'];
-    serviceCreateTime = json['serviceCreateTime'];
-    serviceCreator = json['serviceCreator'];
+    id = json['ID'];
+    grade = json['GRADE'];
+    name = json['NAME'];
+    imagePath = json['imagePath'];
   }
 
 

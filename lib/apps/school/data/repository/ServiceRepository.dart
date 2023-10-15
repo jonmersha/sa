@@ -10,12 +10,11 @@ class ServiceRepository extends GetxService{
   ServiceRepository({required this.apIClient});
 
   Future<Response> getRecommendedProductList() async{
-    return await apIClient.getData(AppConstants.BANKSERVICE);
+    return await apIClient.getData(AppConstants.GRAD_LIST);
 
   }
-
-  Future<Response> getServiceListDetailByID(int id) async{
-    return await apIClient.getData('${AppConstants.BANKSERVICEDETAIL}/?id=$id');
-
-  }
+  // Future<Response> getServiceListDetailByID(int id) async{
+  //   return await apIClient.getData('${AppConstants.BANKSERVICEDETAIL}/?id=$id');
+  //
+  // }
 }

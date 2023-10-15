@@ -138,7 +138,7 @@ class _DocumentSliderState extends State<DocumentSlider> {
                     color: index.isEven ? const Color(0XFF69c5df) : const Color(0XFF69c500),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(AppConstants.IMAGE_URL+productModel.documentImagePath!))),
+                        image: NetworkImage(AppConstants.IMAGE_URL+productModel.imagePath!))),
               ),
             ),
           ),

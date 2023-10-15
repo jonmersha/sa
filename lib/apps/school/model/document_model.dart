@@ -19,35 +19,41 @@ class DocumentModel {
 }
 
 class Document {
-  int? documentID;
-  String? documentName;
-  String? documentDescription;
-  String? documentPath;
-  String? documentImagePath;
-  int? isPublic;
-  String? documentCategory;
-  String? uploadDate;
+  int? iD;
+  String? tITLE;
+  int? rESOURCETYPE;
+  int? gRADE;
+  String? rESDESCRIPTION;
+  String? fILEPATH;
+  int? isFREE;
+  int? pRICE;
+  int? oWNER;
+  String? imagePath;
 
   Document(
-      {this.documentID,
-        this.documentName,
-        this.documentDescription,
-        this.documentPath,
-        this.documentImagePath,
-        this.isPublic,
-        this.documentCategory,
-        this.uploadDate});
+      {this.iD,
+        this.tITLE,
+        this.rESOURCETYPE,
+        this.gRADE,
+        this.rESDESCRIPTION,
+        this.fILEPATH,
+        this.isFREE,
+        this.pRICE,
+        this.oWNER,
+        this.imagePath}
+      );
 
   Document.fromJson(Map<String, dynamic> json) {
-    documentID = json['documentID'];
-    documentName = json['documentName'];
-    documentDescription = json['documentDescription'];
-    documentPath = json['documentPath'];
-    documentImagePath = json['documentImagePath'];
-    isPublic = json['isPublic'];
-    documentCategory = json['documentCategory'];
-    uploadDate = json['uploadDate'];
+    iD = json['ID'];
+    tITLE = json['TITLE'];
+    rESOURCETYPE = json['RESOURCE_TYPE'];
+    gRADE = json['GRADE'];
+    rESDESCRIPTION = json['RES_DESCRIPTION'];
+    fILEPATH = json['FILE_PATH'];
+    isFREE = json['isFREE'];
+    pRICE = json['PRICE'];
+    oWNER = json['OWNER'];
+    imagePath = json['imagePath'];
   }
-
 
 }

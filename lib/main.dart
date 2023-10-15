@@ -1,3 +1,4 @@
+import 'package:awashderash/apps/school/controller/BranchServiceController.dart';
 import 'package:awashderash/apps/school/controller/DocumentController.dart';
 import 'package:awashderash/apps/todo/presentation/pages/todo_home.dart';
 import 'package:awashderash/auth/fire_auth.dart';
@@ -14,7 +15,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   Get.find<DocumentController>().getDocumentList();
-  //Get.find<BranchServiceController>().getServiceList();
+  Get.find<BranchServiceController>().getServiceList();
 
   runApp(GetMaterialApp(
     theme: ThemeData()

@@ -50,13 +50,12 @@ class _MainOperationPageState extends State<MainOperationPage> {
           ),
         ),
       // Showing the Body
-        // Expanded(
-            // child: SingleChildScrollView(
-            //     child: BankServiceBody(),
-            // ),
-       // ),
-        const BankServiceBody()
-
+        Expanded(
+            child: SingleChildScrollView(
+                child: BankServiceBody(),
+            ),
+       ),
+       // const BankServiceBody()
       ],
     ));
   }

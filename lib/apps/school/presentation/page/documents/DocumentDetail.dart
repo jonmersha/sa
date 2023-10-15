@@ -95,7 +95,7 @@ class DocumentDetail extends StatelessWidget {
                         ),
                          color: Colors.white
                       ),
-                        child:Text(documentModel.documentName!,
+                        child:Text(documentModel.tITLE!,
                           style: const TextStyle(
                             color: Colors.blue,
                             fontSize: 20,
@@ -104,7 +104,7 @@ class DocumentDetail extends StatelessWidget {
                         )
                     ),
                     Expanded(
-                      child: PDF(AppConstants.DOC_URL+documentModel.documentPath!),
+                      child: PDF(AppConstants.DOC_URL+documentModel.fILEPATH!),
                     ),
                     SizedBox(
                       height: Dimensions.height20,

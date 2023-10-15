@@ -19,7 +19,7 @@ class CardList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         BigText(
-          text: product.documentName!,
+          text: product.tITLE!,
 
           size: Dimensions.fontSize20,
           color: AppColors.mainColor,
@@ -28,7 +28,7 @@ class CardList extends StatelessWidget {
           height: Dimensions.height10,
         ),
         SmallText(
-          text: product.documentDescription!,
+          text: product.rESDESCRIPTION!,
         ),
         SizedBox(
           height: Dimensions.height10,

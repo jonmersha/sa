@@ -20,10 +20,10 @@ class DocumentController extends GetxController{
   Future<void> getDocumentList() async{
     Response response = await documentRepo.getPopularProductList();
     if(response.statusCode==200){
-      //print("got Products====================================");
+      print("got Products====================================");
       _documentList=[];
-      _documentList.addAll(DocumentModel.fromJson(response.body).document);
-      //print(response.body);
+     _documentList.addAll(DocumentModel.fromJson({"document":response.body}).document);
+      print(response.body);
       update();
       _isLoaded=true;
     }else{

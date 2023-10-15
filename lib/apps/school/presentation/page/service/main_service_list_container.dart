@@ -50,7 +50,7 @@ class DetailServiceListContainer extends StatelessWidget {
                       color: Colors.white
                   ),
 
-                  child:  BigText(text: serviceModel.serviceName!,size: Dimensions.fontSize26, ),
+                  child:  BigText(text: serviceModel.name!,size: Dimensions.fontSize26, ),
                 )
             ),
             pinned: true,
@@ -58,7 +58,7 @@ class DetailServiceListContainer extends StatelessWidget {
             expandedHeight: Dimensions.height200,
             flexibleSpace: FlexibleSpaceBar(
                 background: Image.network(
-                  AppConstants.IMAGE_URL+serviceModel.serviceIconPath!,
+                  AppConstants.IMAGE_URL+serviceModel.imagePath!,
                   width: double.maxFinite,
                   fit: BoxFit.cover,
 
@@ -72,10 +72,10 @@ class DetailServiceListContainer extends StatelessWidget {
                 Container(
                     padding: EdgeInsets.symmetric(horizontal: Dimensions.width20),
                     child:  ExpandableTextWidget(
-                        text: serviceModel.serviceDescription!)
+                        text: serviceModel.name!)
                 ),
                // Text("${ serviceModel.serviceDescription!}: \n Related Service Displayed here"),
-                DetailServiceList(id: serviceModel.serviceID!,)
+                DetailServiceList(id: serviceModel.id!,)
               ],
             ),
 
